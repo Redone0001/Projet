@@ -1,0 +1,6 @@
+Booster,4
+masse,
+carburant,
+coefPuissance,
+consomation,
+
