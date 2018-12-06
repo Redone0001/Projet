@@ -1,8 +1,9 @@
-void module:module(float Masse,float Carburant, float coef):
+void module:module(float Masse,float Carburant, float coef, float SurfaceFrot):
 masse(Masse),
 carburant(Carburant),
-coefPuissance(coef)
+coefPuissance(coef),
+surfaceFrot(SurfaceFrot)
 {
-
+consomation = 0;
 
 }

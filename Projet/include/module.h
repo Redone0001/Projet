@@ -1,15 +1,11 @@
 #pragma once
 
-#include <utility>
-
 class module{
 // variable 
-	std::pair <float,float> vitesse;
-	std::pair <float,float> force;
+	public :
 	const float masse;
 	float carburant;
 	float coefPuissance;
 	float consomation;
-	float surfaceFrot;
-	
+	const float surfaceFrot;
 };
