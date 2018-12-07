@@ -8,5 +8,5 @@ class module{
 	float coefPuissance;
 	float consomation;
 	const float surfaceFrot;
-	void puissance();
+	float puissance();
 };
