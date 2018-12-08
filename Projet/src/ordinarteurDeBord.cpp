@@ -3,7 +3,7 @@
 #include <math.h>
 
 using namespace std;
-ardinateurDeBord::ordidanteurDeBord(){
+ordinateurDeBord::ordinateurDeBord(){
 		
 }
 
