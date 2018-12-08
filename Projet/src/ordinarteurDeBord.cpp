@@ -44,6 +44,10 @@ void ordinateurDeBord::calculGravite(vector lanceurVec){
 	gravite.second = pow(6.674,pow(10,-11))*masseTot/pow(position.second,2);
 }
 
+float ordinateurDeBord::pression(){
+	float distanceCentreTerre = sqrt(pow(possition.first,2)+pow(possition.second,2))
+}
+
 float ordinateurDeBord::sumFrottement(vector lanceurVec){
 	for (auto x:lanceurVec){
 		surfaceTot+=x.surfaceDeFrot;
