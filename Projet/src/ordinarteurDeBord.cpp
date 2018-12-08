@@ -4,7 +4,13 @@
 
 using namespace std;
 ordinateurDeBord::ordinateurDeBord(){
-		
+	angle = 3.141592;
+	possition.first = 3371000.0;
+	possition.second=0;
+	vitesse.first=0;
+	vitesse.second=465;
+	acceleration.first=0;
+	acceleration.second=0;
 }
 
 bool ordidanteurDeBord::checkCarburant(module x){
@@ -57,4 +63,21 @@ void ordinateurDeBord::sumForce(vector lanceurVec){
 	SommeForces.second = gravite.second+first+power * cos(angle)-frot * cos(angle);
 	
 }
+float ordinateurDeBord::checkMasse(vector lanceurVec){
+	float masseTot;
+	for (auto x:lanceurVec){
+	masseTot+=x.masse;
+	masseTot+=x.carburant;	
+	}
+	return masseTot;
+}
 
+void ordinateurDeBord::updateMouv(float t,float masse){
+	possition.first = vitesse.first*t;
+	possition.second=vitesse.second*t;
+	vitesse.first = acceleration.first*t;
+	vitesse.second = acceleration.second*t;
+	acceleration.first=SommeForces.first/masse
+	acceleration.second=SommeForces.second/masse
+		
+}
