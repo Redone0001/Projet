@@ -10,6 +10,7 @@ class ordinateurDeBord{
 	float sumFrottement(vector);//dans le sens opposé au mouvement
 	void updateMouv(float);
 	float checkMasse(vector);
+	float pression();
 	pair <float,float> gravite;
 	pair <float,float> position; // la possition de la fussée est repéré dans un référentiel placé au centre de la terre et immobile
 	pair <float,float> vitesse; // la vitesse est dans le même repère que la possition 
