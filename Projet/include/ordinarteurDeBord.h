@@ -7,7 +7,7 @@ class ordinateurDeBord{
 	float sumPuissance(vector);// dans le sens du mouvement
 	void sumForces(); // modifie la pair de float Somme des forces
 	void calculGravite(vector);  // modifie la pair de float gravite
-	float sumFrottement(vector lanceurVec);//dans le sens opposé au mouvement
+	float sumFrottement(vector);//dans le sens opposé au mouvement
 	pair <float,float> gravite;
 	pair <float,float> position; // la possition de la fussée est repéré dans un référentiel placé au centre de la terre et immobile
 	pair <float,float> vitesse; // la vitesse est dans le même repère que la possition 
