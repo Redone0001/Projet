@@ -45,7 +45,9 @@ void ordinateurDeBord::calculGravite(vector lanceurVec){
 }
 
 float ordinateurDeBord::pression(){
-	float distanceCentreTerre = sqrt(pow(possition.first,2)+pow(possition.second,2))
+	float altitude = sqrt(pow(possition.first,2)+pow(possition.second,2))-3371000.0;
+	float pression = 101325*pow(1-(0.0065*altitude/288.15),(sqrt(pow(gravite.first,2)*pow(gravite.second,2)))*0.0289644/(8.31447*0.0065)
+	return pression;
 }
 
 float ordinateurDeBord::sumFrottement(vector lanceurVec){
