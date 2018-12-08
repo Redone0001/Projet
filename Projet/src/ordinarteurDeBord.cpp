@@ -51,9 +51,10 @@ float ordinateurDeBord::sumFrottement(vector lanceurVec){
 
 void ordinateurDeBord::sumForce(vector lanceurVec){
 	calculGravite(lanceurVec);
-	sumPuissance(lanceurVec);
-	sumFrottement(lanceurVec);
-	
+	float power = sumPuissance(lanceurVec); 		// ATTENTION ceci ne fonction que si on décolle "vers le haut" si on part de l'autre côté de la terre on va avoir des soucis
+	float frot = sumFrottement(lanceurVec);			// il est nécéssaire de bien gérer l'angle de la fussée
+	SommeForces.first = gravite.first+power * sin(angle)-frot *sin(angle);
+	SommeForces.second = gravite.second+first+power * cos(angle)-frot * cos(angle);
 	
 }
 
