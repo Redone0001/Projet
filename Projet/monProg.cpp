@@ -16,11 +16,19 @@ int main(){
 		module booster(1000,500,5,10);
 		lanceurVec.push_back(booster);
 	}
+	ordinateurDeBord ENIAC;
 //vol
 	while(jobDone==false){
+		for (auto x:lanceurVec){
+			ENIAC.checkCarburant(x);
+			ENIAC.updateCarburant(x);
+			
+		}
+		ENIAC.sumForces(lanceurVec);
+		float masse = checkMasse(laceurVec);
+		float t = 0.05;
+		ENIAC.updateMouv(t,masse);
 		
-
-
 
 	}
 	
