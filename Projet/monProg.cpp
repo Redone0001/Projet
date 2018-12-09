@@ -1,7 +1,9 @@
-#include "../include/module.h"
+#include "include/ordinateurDeBord.h"
+#include "include/module.h"
+#include "include/save.h"
 #include <vector>
 
-using namespace std
+using namespace std;
 
 int main(){
 //initialisation 
@@ -12,20 +14,21 @@ int main(){
 	lanceurVec.push_back(soyuz);
 	lanceurVec.push_back(etage1);
 	lanceurVec.push_back(etage2);
-	for (int i=0, i<4; i++){
+	for (int i=0;i<4; i++){
 		module booster(1000,500,5,10);
 		lanceurVec.push_back(booster);
 	}
 	ordinateurDeBord ENIAC;
 //vol
-	while(jobDone==false){
+	bool jobDone = false;
+	while(jobDone==true){
 		for (auto x:lanceurVec){
 			ENIAC.checkCarburant(x);
 			ENIAC.updateCarburant(x);
 			
 		}
-		ENIAC.sumForces(lanceurVec);
-		float masse = checkMasse(laceurVec);
+		ENIAC.sumForce(lanceurVec);
+		float masse = ENIAC.checkMasse(lanceurVec);
 		float t = 0.05;
 		ENIAC.updateMouv(t,masse);
 		

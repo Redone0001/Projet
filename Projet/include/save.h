@@ -1,7 +1,8 @@
 #include <iostream>
 #include <fstream>
+#include <string>
 
-bool saveToCSV(string fileName, ordinateurDeBord ENIAC){
+bool saveToCSV(std::string fileName, ordinateurDeBord ENIAC){
 	std::ofstream fs (fileName, std::fstream::app);
 	if (! fs.is_open()) return 0;
 	/*
@@ -12,6 +13,6 @@ bool saveToCSV(string fileName, ordinateurDeBord ENIAC){
 	pair <float,float> SommeForces;
 	float angle; // angle de la fusée / à la verticale
 	*/
-	fs <<position.first<<","<<position.second<<","<<"vitesse.first<<","<<vitesse.second<<","<<acceleration.first<<","<<acceleration.second;
+	fs <<ENIAC.position.first<<","<<ENIAC.position.second<<","<<ENIAC.vitesse.first<<","<<ENIAC.vitesse.second<<","<<ENIAC.acceleration.first<<","<<ENIAC.acceleration.second;
 	
 }

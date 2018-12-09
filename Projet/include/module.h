@@ -9,4 +9,6 @@ class module{
 	float consomation;
 	const float surfaceFrot;
 	float puissance();
+	module(float,float,float,float);
+	~module();
 };
