@@ -21,17 +21,19 @@ int main(){
 	ordinateurDeBord ENIAC;
 //vol
 	bool jobDone = false;
-	while(jobDone==true){
+	float t = 0.05;
+	while(t<=(4*60)){
 		for (auto x:lanceurVec){
 			ENIAC.checkCarburant(x);
 			ENIAC.updateCarburant(x);
 			
 		}
+		ENIAC.updatAngle(t);
 		ENIAC.sumForce(lanceurVec);
 		float masse = ENIAC.checkMasse(lanceurVec);
-		float t = 0.05;
 		ENIAC.updateMouv(t,masse);
-		
+		saveToCSV("save.cs",ENIAC);
+		t+= 0.05;
 
 	}
 	
