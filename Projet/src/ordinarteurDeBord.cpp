@@ -100,5 +100,4 @@ void ordinateurDeBord::udateAngle(float temps){
 	
 	angle = ((1/(1+exp(-0.05*(temps-120))*1.570796)+1.570796);
 	
-	
 }
