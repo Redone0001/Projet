@@ -45,7 +45,7 @@ void ordinateurDeBord::calculGravite(vector <module> lanceurVec){
 	gravite.second = pow(6.674,pow(10,-11))*masseTot/pow(position.second,2);
 }
 
-float ordinateurDeBord::pression(){
+float ordinateurDeBord::densite(){
 	float altitude = sqrt(pow(position.first,2)+pow(position.second,2))-3371000.0;
 	float pres =0;
 	if (altitude<350000){
@@ -64,7 +64,7 @@ float ordinateurDeBord::sumFrottement(vector <module> lanceurVec){
 		surfaceTot+=x.surfaceFrot;
 	}
 	float forceFrot=0;
-	forceFrot = pow(vitesse.first,2)*pow(vitesse.second,2)*pression()*surfaceTot;
+	forceFrot = pow(vitesse.first,2)*pow(vitesse.second,2)*densite()*surfaceTot;
 		
 	return forceFrot;
 	
