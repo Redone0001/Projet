@@ -15,6 +15,7 @@ class ordinateurDeBord{
 	void updateMouv(float,float);
 	float checkMasse(std::vector <module>);
 	float pression();
+	void udateAngle(float);
 	std::pair <float,float> gravite;
 	std::pair <float,float> position; // la possition de la fussée est repéré dans un référentiel placé au centre de la terre et immobile
 	std::pair <float,float> vitesse; // la vitesse est dans le même repère que la possition 
